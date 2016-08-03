@@ -1,0 +1,31 @@
+{
+  "name": "web-comp",
+  "version": "1.0.0",
+  "description": "A repository to try the actual WebComponents integration and support",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylerjen/webComp.git"
+  },
+  "keywords": [
+    "webcomponents",
+    "html5",
+    "html",
+    "import",
+    "shadow",
+    "dom",
+    "custom",
+    "elements",
+    "html",
+    "template"
+  ],
+  "author": "Yann Lerjen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ylerjen/webComp/issues"
+  },
+  "homepage": "https://github.com/ylerjen/webComp#readme"
+}
