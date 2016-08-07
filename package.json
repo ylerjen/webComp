@@ -30,5 +30,15 @@
   "homepage": "https://github.com/ylerjen/webComp#readme",
   "dependencies": {
     "webcomponents.js": "^0.7.22"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-processhtml": "^0.4.0"
   }
 }
