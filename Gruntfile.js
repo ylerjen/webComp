@@ -32,11 +32,14 @@ module.exports = function(grunt) {
     },
     processhtml: {
       options: {
-        // Task-specific options go here. 
+        process: true,
+        data: {
+          message: 'This is production distribution'
+        }
       },
       dist: {
         files: {
-          'dist/index.html': ['index.html']
+          'dist/webcomponents/index.html': ['src/webcomponents/index.html']
         }
       },
     },
@@ -57,7 +60,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('build', ['processhtml', 'copy']);
+  grunt.registerTask('build', ['copy', 'processhtml']);
   grunt.registerTask('dev', ['browserSync', 'watch']);
 
 
