@@ -38,3 +38,6 @@ jspm_packages
 
 # Dist folder for builded files
 dist
+
+# Sass cache folder
+.sass-cache
