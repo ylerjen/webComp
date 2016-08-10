@@ -59,13 +59,14 @@ module.exports = function(grunt) {
     sass: {
       dist: {                            // Target
         options: {                       // Target options
-          style: 'expanded'
+          style: 'expanded',
+          sourcemap: 'none'
         },
         files: [{
             expand: true,
             cwd: 'src',
             src: ['**/*.scss'],
-            dest: 'src',
+            dest: 'tmp',
             ext: '.css'
         }]
       }
