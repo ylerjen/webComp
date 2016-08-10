@@ -35,6 +35,10 @@ module.exports = function(grunt) {
             }
         }
     },
+    clean: {
+      dist: 'dist',
+      temp: 'tmp'
+    },
     copy: {
       dist: {
         files: [
