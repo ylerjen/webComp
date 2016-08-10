@@ -30,9 +30,9 @@ module.exports = function(grunt) {
         },
         options: {
             server: {
-                watchTask: true,
                 baseDir: "./dist/"
-            }
+            },
+            watchTask: true
         }
     },
     clean: {
@@ -56,7 +56,10 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/webcomponents/yl-card/yl-card.html': ['tmp/webcomponents/yl-card/yl-card.html']
+          'dist/webcomponents/yl-card/yl-card.html': ['tmp/webcomponents/yl-card/yl-card.html'],
+          'dist/webcomponents/index.html': ['src/webcomponents/index.html'],
+          'dist/index.html': ['src/index.html']
+
         }
       },
     },
