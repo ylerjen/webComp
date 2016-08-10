@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     copy: {
       dist: {
         files: [
-          {cwd: 'src', src: '**/*', dest: 'dist/', expand: true},
+          {cwd: 'src', src: '**/*', dest: 'tmp/', expand: true},
           {cwd: 'node_modules', src: 'webcomponents.js/webcomponents.js', dest: 'dist/vendor/', expand: true}
         ]
       }
