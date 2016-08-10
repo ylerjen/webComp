@@ -82,7 +82,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('build', ['copy', 'processhtml']);
+  grunt.registerTask('build', ['clean', 'copy', 'babel', 'sass', 'processhtml', 'clean:temp']);
   grunt.registerTask('dev', ['browserSync', 'watch']);
 
 
