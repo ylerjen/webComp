@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+  require('load-grunt-tasks')(grunt); // 
+
   grunt.initConfig({
     jshint: {
       files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
@@ -62,13 +64,6 @@ module.exports = function(grunt) {
       tasks: ['build']
     }
   });
-
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-processhtml');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['jshint']);
   grunt.registerTask('build', ['copy', 'processhtml']);
