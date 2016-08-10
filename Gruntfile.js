@@ -11,6 +11,17 @@ module.exports = function(grunt) {
         }
       }
     },
+    babel: {
+      options: {
+        sourceMap: false,
+        presets: ['es2015']
+      },
+      dist: {
+        files: [
+          {cwd: 'src', src: '**/*.js', dest: 'tmp/', expand: true},
+        ]
+      }
+    },
     browserSync: {
         bsFiles: {
             src : [
