@@ -52,7 +52,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/webcomponents/index.html': ['src/webcomponents/index.html']
+          'dist/webcomponents/yl-card/yl-card.html': ['tmp/webcomponents/yl-card/yl-card.html']
         }
       },
     },
