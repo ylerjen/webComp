@@ -55,8 +55,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/webcomponents/yl-card/yl-card.html': ['tmp/webcomponents/yl-card/yl-card.html'],
-          'dist/webcomponents/index.html': ['src/webcomponents/index.html'],
+          'dist/es6-card/es6-card.html': ['src/es6-card/es6-card.html'],
+          'dist/yl-card/yl-card.html': ['tmp/yl-card/yl-card.html'],
           'dist/index.html': ['src/index.html']
 
         }
