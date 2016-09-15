@@ -1,16 +1,16 @@
 $text-color: #156c91;
 
-.yl-card {
+.my-card {
     border: 1px solid black;
     border-radius: 4px;
     display: inline-block;
     padding: 4px 12px;
 
-    .yl-card__name {
+    .my-card__name {
         color: $text-color;
         margin: 4px;
     }
-    .yl-card__title {
+    .my-card__title {
         color: #666;
         font-style: italic;
         margin: 4px;

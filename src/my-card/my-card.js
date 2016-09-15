@@ -3,13 +3,13 @@
 
 var hostDocument = document._currentScript.ownerDocument;
 var template = hostDocument.getElementById('tpl_card');
-var compPrefix = "yl-card__";
+var compPrefix = "my-card__";
 
 // Create the component
-var YlCardProto = Object.create(HTMLElement.prototype);
+var MyCardProto = Object.create(HTMLElement.prototype);
 
 // set the callback for the component created event
-YlCardProto.createdCallback = function() {
+MyCardProto.createdCallback = function() {
 
   // set the template in the element
   var shadow = this.createShadowRoot();
@@ -33,6 +33,6 @@ YlCardProto.createdCallback = function() {
 
 
 // register the custom-element of the component
-document.registerElement('yl-card', {
-  prototype: YlCardProto
+document.registerElement('my-card', {
+  prototype: MyCardProto
 });
