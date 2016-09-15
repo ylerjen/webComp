@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt); // 
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     jshint: {
       files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
       options: {
@@ -29,10 +30,8 @@ module.exports = function(grunt) {
             ]
         },
         options: {
-            server: {
-                baseDir: "./dist/"
-            },
-            watchTask: true
+			    	watchTask: true,
+            server: "./dist"
         }
     },
     clean: {
@@ -85,9 +84,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('build', ['clean', 'copy', 'babel', 'sass', 'processhtml', 'clean:temp']);
-  grunt.registerTask('dev', ['browserSync', 'watch']);
-
-
+  grunt.registerTask('build', [/*'clean',*/ 'copy', 'babel', 'sass', 'processhtml', 'clean:temp']);
+  grunt.registerTask('dev', ['build', 'browserSync', 'watch']);
 
 };
