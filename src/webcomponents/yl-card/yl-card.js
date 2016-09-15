@@ -1,13 +1,38 @@
+// Use the polyfill if the currentScript property is not supported by the browser
+//document._currentScript = document._currentScript || document.currentScript;
+
+var hostDocument = document._currentScript.ownerDocument;
+var template = hostDocument.getElementById('tpl_card');
+var compPrefix = "yl-card__";
+
+// Create the component
 var YlCardProto = Object.create(HTMLElement.prototype);
+
+// set the callback for the component created event
 YlCardProto.createdCallback = function() {
-  console.debug(this);
+
+  // set the template in the element
+  var shadow = this.createShadowRoot();
+  console.log('template', template);
+  shadow.appendChild(template.content);
+
+  // set the passed name into .name
   var name = this.getAttribute('name');
-  let title = document.createElement('h1');
-  title.className = 'name';
-  this.appendChild(title);
-  title.innerText = name;
+  shadow.querySelector('.' + compPrefix + 'name').innerHTML = name;
+  
+  // set the passed title into the .title
+  var title = this.getAttribute('title');
+  var titleEl = shadow.querySelector('.' + compPrefix + 'title');
+  if (title && title.trim()) {
+    titleEl.innerHTML = title;
+  } else {
+    titleEl.parentElement.removeChild(titleEl);
+  }
 };
 
-var YlCard = document.registerElement('yl-card', {
+
+
+// register the custom-element of the component
+document.registerElement('yl-card', {
   prototype: YlCardProto
 });
