@@ -1,0 +1,49 @@
+{
+  "name": "web-comp",
+  "version": "1.0.0",
+  "description": "A repository to try the actual WebComponents integration and support",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylerjen/webComp.git"
+  },
+  "keywords": [
+    "webcomponents",
+    "html5",
+    "html",
+    "import",
+    "shadow",
+    "dom",
+    "custom",
+    "elements",
+    "html",
+    "template"
+  ],
+  "author": "Yann Lerjen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ylerjen/webComp/issues"
+  },
+  "homepage": "https://github.com/ylerjen/webComp#readme",
+  "dependencies": {
+    "webcomponents.js": "^0.7.22"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.13.2",
+    "browser-sync": "^2.16.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-processhtml": "^0.4.0",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}

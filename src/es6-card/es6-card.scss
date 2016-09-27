@@ -1,0 +1,47 @@
+$card-color: #af062c;
+$card-color-invert: white;
+$text-color: #8a0624;
+
+.es6-card {
+    background-color: $card-color;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: $card-color-invert;
+    display: inline-block;
+    font-size: 15px;
+    min-width: 250px;
+    text-align: center;
+
+
+    .es6-card__header {
+
+        >h1 {
+            font-size: 2rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        >h2 {
+            font-size: 1rem;
+            margin: 4px 0;
+        }
+    }
+
+    .es6-card__content {
+        background-color: $card-color-invert;
+        padding: 4px 8px;
+        margin-bottom: 8px;
+        min-height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .es6-card__name {
+        color: $text-color;
+        margin: 4px;
+    }
+    .es6-card__title {
+        color: #666;
+        font-style: italic;
+        margin: 4px;
+    }
+}
