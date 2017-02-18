@@ -57,6 +57,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'dist/webcomponents/yl-card/yl-card.html': ['tmp/webcomponents/yl-card/yl-card.html'],
+          'dist/webcomponents/yl-loader/yl-loader.html': ['tmp/webcomponents/yl-loader/yl-loader.html'],
           'dist/webcomponents/index.html': ['src/webcomponents/index.html'],
           'dist/index.html': ['src/index.html']
 
