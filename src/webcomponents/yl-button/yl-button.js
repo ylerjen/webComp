@@ -14,13 +14,14 @@ class YlButton extends HTMLElement {
      * @memberof YlButton#
      */
     createdCallback() {
-        let tpl = _currentScript.getElementById('tpl_yl-button');
+        let tpl = _currentScript.getElementById('tpl_' + COMP_NAME);
         let clone = document.importNode(tpl.content, true);
         console.debug(clone);
         let isLoading = this.getAttribute(IS_LOADING_ATTR);
         let shadowRoot = this.createShadowRoot();
         shadowRoot.appendChild(clone);
-        this.btnTextEl = shadowRoot.querySelector('.'+COMP_NAME+'__text');
+        this.btnTextEl = shadowRoot.querySelector('.' + COMP_NAME + '__text');
+        this.setLoadingState(isLoading);
     }
     /**
      *  Fires when an instance was inserted into the document.
@@ -44,17 +45,17 @@ class YlButton extends HTMLElement {
      * @param {bool} isLoading - if the button is in the loading state
      */
     setLoadingState(isLoading) {
-        if (typeof show === 'undefined') {
-            show = true;
+        if (typeof isLoading === 'undefined') {
+            isLoading = true;
         }
-        let buttonEl = this.querySelector('.'+COMP_NAME);
-        let loaderEl = this.querySelector('.'+COMP_NAME+'__loader');
-        if (show) {
+        let buttonEl = this.shadowRoot.querySelector('.' + COMP_NAME);
+        let loaderEl = this.shadowRoot.querySelector('.' + COMP_NAME + '__loader');
+        if (isLoading) {
             buttonEl.setAttribute('disabled', 'disabled');
             loaderEl.removeAttribute('hidden');
         } else {
             buttonEl.removeAttribute('disabled');
-            loaderEl.setAttribute('hidden');
+            loaderEl.setAttribute('hidden','hidden');
         }
     }
 }
