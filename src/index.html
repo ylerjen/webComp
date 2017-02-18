@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>WebComponents</title>
-</head>
-<body>
-    <h1>These are example of web-components created with different libraries to learn their specificity.</h1>
-    <nav>
-        <ul>
-            <li><a href="webcomponents">WebComponents</a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </nav>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>WebComponentJs Polyfill</title>
+        <!-- build:js ../vendor/webcomponents.js/webcomponents.js -->
+        <script src="../node_modules/webcomponents.js/webcomponents.js"></script>
+        <!-- /build -->
+        <link rel="import" href="my-card/my-card.html">
+        <link rel="import" href="es6-card/es6-card.html">
+    </head>
+    <body>
+        <h1>Playing with WebComponents</h1>
+        <my-card name="John Doh" title="es5 code"></my-card>
+        <my-card name="Jeanne Dark" title="es5 code"></my-card>
+        <es6-card name="John Doh" title="es6"></es6-card>
+        <es6-card name="Jeanne Dark" title="es6"></es6-card>
+    </body>
 </html>
