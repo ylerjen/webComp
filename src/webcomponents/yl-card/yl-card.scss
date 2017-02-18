@@ -1,5 +1,10 @@
-$text-color: red;
+.yl-card {
+    padding: 4px;
+    border: 1px solid black;
+}
+.yl-card__name {
 
-.name {
-    color: $text-color;
+}
+.yl-card__desc {
+    color: grey;
 }
